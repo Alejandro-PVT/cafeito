@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 46, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Golux/Downloads/CafeITOax/app/api/auth/check/route.ts"],"sourcesContent":["import { type NextRequest, NextResponse } from \"next/server\"\n\nexport async function GET(request: NextRequest) {\n  const token = request.cookies.get(\"auth_token\")?.value\n\n  if (!token) {\n    return NextResponse.json({ error: \"No autorizado\" }, { status: 401 })\n  }\n\n  return NextResponse.json({ authenticated: true })\n}\n"],"names":[],"mappings":";;;;AAAA;;AAEO,eAAe,IAAI,OAAoB;IAC5C,MAAM,QAAQ,QAAQ,OAAO,CAAC,GAAG,CAAC,eAAe;IAEjD,IAAI,CAAC,OAAO;QACV,OAAO,gJAAY,CAAC,IAAI,CAAC;YAAE,OAAO;QAAgB,GAAG;YAAE,QAAQ;QAAI;IACrE;IAEA,OAAO,gJAAY,CAAC,IAAI,CAAC;QAAE,eAAe;IAAK;AACjD"}}]
+}
